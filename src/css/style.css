@@ -1,0 +1,23 @@
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: cadetblue;
+}
+
+* {
+    margin: 0;
+}
+
+.search-input {
+    width: 40vw;
+    height: 5vh;
+    font-size: 1.3em;
+}
+
+.body {
+    justify-content: center;
+    text-align: center;
+    padding: 3em;
+}
