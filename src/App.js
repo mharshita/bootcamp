@@ -1,17 +1,76 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./Header";
+import Card from "./Card";
 
-//Nested header using React.createElement
-// const heading = React.createElement("div", {id: "heading", className: "title"}, [
-//     React.createElement("h1", {id: "head1"}, "Hello World!"),
-//     React.createElement("h2", {id: "head2"}, "I am Harshita Mangla"),
-//     React.createElement("h3", {id: "head3"}, "I am a software engineer")
-// ]);
+const data = [
+  {
+    name: "Harshita Mangla",
+    company: "GJUST",
+    place: "Faridabad",
+    id: 1,
+  },
+  {
+    name: "Sumathi",
+    company: "Capgemini",
+    place: "Guntur",
+    id: 2,
+  },
+  {
+    name: "Shivam Kumar",
+    company: "Korber Supply Chain",
+    place: "Mirzapur",
+    id: 3,
+  },
+  {
+    name: "Atul Singh",
+    company: "Appinventiv Technologies",
+    place: "Noida",
+    id: 4,
+  },
+  {
+    name: "Prajwali",
+    company: "Zeta",
+    place: "Belikahalli",
+    id: 5,
+  },
+  {
+    name: "Pranav",
+    company: "ITC Infotech",
+    place: "Bengaluru",
+    id: 6,
+  },
+  {
+    name: "Priya",
+    company: "Manhattan Associates",
+    place: "NA",
+    id: 7,
+  },
+  {
+    name: "Samridhi Pandey",
+    company: "HPE",
+    place: "Noida",
+    id: 8,
+  },
+  {
+    name: "Sowmya Reddy",
+    company: "Landmark Health Pvt Ltd",
+    place: "Kithaganur",
+    id: 9,
+  },
+  {
+    name: "Uttapal",
+    company: "Ramjas College",
+    place: "Vijaynagar",
+    id: 10,
+  },
+];
 
-//Functional component of header
-const Title = () => {
-  return <h1 id="head1">Hello World!</h1>;
+const CardContainer = () => {
+  const cards = data.map((e) => {
+    return <Card member={e} key={e.id} className="card" />;
+  });
+  return cards;
 };
 
 const App = () => {
@@ -19,9 +78,9 @@ const App = () => {
     <div id="heading" className="title">
       <Header />
       <div className="body">
-        <Title />
-        <h2 id="head2">I am Harshita Mangla</h2>
-        <h3 id="head3">I am a software engineer</h3>
+        <div className="row">
+          <CardContainer />
+        </div>
       </div>
     </div>
   );
