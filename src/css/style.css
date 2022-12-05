@@ -21,8 +21,19 @@
     width: 40vw;
     height: 5vh;
     font-size: 1.3em;
+    outline: none;
 }
 
+.search-button {
+    width: 7vw;
+    height: 6vh;
+    font-size: 1.3em;
+    cursor: pointer;
+    background-color: rgb(29, 85, 87);
+    color: white;
+    border: none;
+    outline: none;
+}
 .body {
     justify-content: center;
     text-align: center;
