@@ -1,7 +1,6 @@
 import React from "react";
 import { FaUserCircle } from "react-icons/fa";
-
-const TeamName = "Storm Troopers";
+import { TeamName } from "./resources/constants";
 
 const Header = () => {
   return (
@@ -13,17 +12,6 @@ const Header = () => {
           alt="logo"
           width={250}
         />
-        {/* search bar */}
-        <div className="search-bar">
-          <input
-            type="text"
-            placeholder="Search"
-            className="search-input"
-            onChange={(e) => {
-              console.log(e.target.value);
-            }}
-          />
-        </div>
         {/* user icon */}
         <div className="user-icon">
           <FaUserCircle size={50} color="white" />
