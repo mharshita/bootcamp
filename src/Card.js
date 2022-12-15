@@ -1,17 +1,16 @@
 import React from "react";
-import { FaUser } from "react-icons/fa";
 
-const Card = (props) => {
+const Card = ({ member }) => {
   return (
     <div className="card">
       <div className="card-body">
         <div className="img">
-          <FaUser size="5em" className="user-icon-card" />
+          <img src={member.avatar_url} alt="user" className="card-img" />
         </div>
         <div className="card-info">
-          <h2 className="name">{props.member.name}</h2>
-          <p className="work">{props.member.company}</p>
-          <p className="place">{props.member.place}</p>
+          <h2 className="name">{member.name}</h2>
+          <p className="work">{member.company}</p>
+          <p className="place">{member.location}</p>
         </div>
       </div>
     </div>

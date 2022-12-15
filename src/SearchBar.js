@@ -1,14 +1,13 @@
 import React from "react";
 import { useState } from "react";
-import data from "./resources/data.json";
 
-const searchMembers = (searchText) => {
-  return data.filter((res) =>
-    res.name.toLocaleLowerCase().includes(searchText.toLocaleLowerCase())
+const searchMembers = (searchText, listOfMembers) => {
+  return listOfMembers.filter((res) =>
+    res?.name?.toLocaleLowerCase().includes(searchText.toLocaleLowerCase())
   );
 };
 
-const SearchBar = ({ setFilteredMembers }) => {
+const SearchBar = ({ setFilteredMembers, listOfMembers }) => {
   const [searchText, setSearchText] = useState("");
 
   return (
@@ -16,7 +15,7 @@ const SearchBar = ({ setFilteredMembers }) => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          const filteredMembers = searchMembers(searchText);
+          const filteredMembers = searchMembers(searchText, listOfMembers);
           setFilteredMembers(filteredMembers);
         }}
       >

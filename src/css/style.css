@@ -46,13 +46,19 @@
 }
 
 .card {
-    width: 17em;
-    height: 15em;
+    width: 16em;
+        height: 18em;
     border: 2px solid rgb(183, 181, 181);
     border-radius: 1em;
     margin: 2em;
+    padding: 1em;
 }
 
+.card-img {
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+}
 .card-info {
     margin-top: 2em;
 }
