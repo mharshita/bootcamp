@@ -19,6 +19,7 @@ const CardContainer = ({ filteredMembers }) => {
 const App = () => {
   const [listOfMembers, setListOfMembers] = useState([]);
   const [filteredMembers, setFilteredMembers] = useState([]);
+  const [isSearchTextAvailable, setIsSearchTextAvailable] = useState(false);
 
   useEffect(() => {
     fetchData();
@@ -43,13 +44,18 @@ const App = () => {
         <SearchBar
           listOfMembers={listOfMembers}
           setFilteredMembers={setFilteredMembers}
+          setIsSearchTextAvailable={setIsSearchTextAvailable}
         />
         <div className="row">
-          <CardContainer
-            filteredMembers={
-              filteredMembers.length ? filteredMembers : listOfMembers
-            }
-          />
+          {isSearchTextAvailable ? (
+            filteredMembers.length ? (
+              <CardContainer filteredMembers={filteredMembers} />
+            ) : (
+              <NoResultsFound />
+            )
+          ) : (
+            <CardContainer filteredMembers={listOfMembers} />
+          )}
         </div>
       </div>
     </div>

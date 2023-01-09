@@ -7,7 +7,11 @@ const searchMembers = (searchText, listOfMembers) => {
   );
 };
 
-const SearchBar = ({ setFilteredMembers, listOfMembers }) => {
+const SearchBar = ({
+  setFilteredMembers,
+  listOfMembers,
+  setIsSearchTextAvailable,
+}) => {
   const [searchText, setSearchText] = useState("");
 
   return (
@@ -15,6 +19,7 @@ const SearchBar = ({ setFilteredMembers, listOfMembers }) => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
+          setIsSearchTextAvailable(true);
           const filteredMembers = searchMembers(searchText, listOfMembers);
           setFilteredMembers(filteredMembers);
         }}
