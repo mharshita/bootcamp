@@ -1,62 +1,38 @@
 [
   {
-    "name": "Harshita Mangla",
-    "company": "GJUST",
-    "place": "Faridabad",
+    "username": "mharshita",
     "id": 1
   },
   {
-    "name": "Sumathi",
-    "company": "Capgemini",
-    "place": "Guntur",
+    "username": "akshaymarch7",
     "id": 2
   },
   {
-    "name": "Shivam Kumar",
-    "company": "Korber Supply Chain",
-    "place": "Mirzapur",
+    "username": "sumathi3399",
     "id": 3
   },
   {
-    "name": "Atul Singh",
-    "company": "Appinventiv Technologies",
-    "place": "Noida",
+    "username": "ShivamPandey001",
     "id": 4
   },
   {
-    "name": "Prajwali",
-    "company": "Zeta",
-    "place": "Belikahalli",
+    "username": "expedite-atul",
     "id": 5
   },
   {
-    "name": "Pranav",
-    "company": "ITC Infotech",
-    "place": "Bengaluru",
+    "username": "iprajwali15",
     "id": 6
   },
   {
-    "name": "Priya",
-    "company": "Manhattan Associates",
-    "place": "NA",
+    "username": "PriyaS1-cloud",
     "id": 7
   },
   {
-    "name": "Samridhi Pandey",
-    "company": "HPE",
-    "place": "Noida",
+    "username": "sow2245",
     "id": 8
   },
   {
-    "name": "Sowmya Reddy",
-    "company": "Landmark Health Pvt Ltd",
-    "place": "Kithaganur",
+    "username": "vickydarlinn",
     "id": 9
-  },
-  {
-    "name": "Uttapal",
-    "company": "Ramjas College",
-    "place": "Vijaynagar",
-    "id": 10
   }
 ]
