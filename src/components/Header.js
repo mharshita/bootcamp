@@ -1,6 +1,6 @@
 import React from "react";
 import { FaUserCircle } from "react-icons/fa";
-import { TeamName } from "./resources/constants";
+import { TeamName } from "../utils/constants";
 
 const Header = () => {
   return (
