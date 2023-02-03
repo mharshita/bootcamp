@@ -7,6 +7,7 @@ import Error from "./components/Error";
 import Member from "./components/Member";
 import SearchMember from "./components/SearchMember";
 import Home from "./components/Home";
+import Profile from "./components/Profile";
 
 const App = () => {
   return (
@@ -37,11 +38,17 @@ const appRouter = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
+      {
+        path: "/about",
+        element: <AboutUs />,
+        children: [
+          {
+            path: "profile",
+            element: <Profile name={"Harshita"} />,
+          },
+        ],
+      },
     ],
-  },
-  {
-    path: "/about",
-    element: <AboutUs />,
   },
 ]);
 
