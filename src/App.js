@@ -1,13 +1,16 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import AboutUs from "./components/AboutUs";
+// import AboutUs from "./components/AboutUs";
 import Error from "./components/Error";
 import Member from "./components/Member";
-import SearchMember from "./components/SearchMember";
+// import SearchMember from "./components/SearchMember";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
+
+const AboutUs = lazy(() => import("./components/AboutUs"));
+const SearchMember = lazy(() => import("./components/SearchMember"));
 
 const App = () => {
   return (
@@ -32,7 +35,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/search",
-        element: <SearchMember />,
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <SearchMember />
+          </Suspense>
+        ),
       },
       {
         path: "/",
@@ -40,7 +47,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <AboutUs />,
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <AboutUs />
+          </Suspense>
+        ),
         children: [
           {
             path: "profile",

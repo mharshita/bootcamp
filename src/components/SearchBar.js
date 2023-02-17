@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import stateObj from "../utils/state.json";
+import useCities from "./useCities";
 
 const searchMembers = (searchText, listOfMembers) => {
   return listOfMembers.filter((res) =>
@@ -9,6 +11,10 @@ const searchMembers = (searchText, listOfMembers) => {
 
 const SearchBar = ({ setFilteredMembers, listOfMembers }) => {
   const [searchText, setSearchText] = useState("");
+  const [stateName, setStateName] = useState("Andaman and Nicobar Islands");
+  const [cityName, setCityName] = useState("");
+
+  const cityList = useCities(stateName);
 
   return (
     <div className="search-bar">
@@ -31,6 +37,20 @@ const SearchBar = ({ setFilteredMembers, listOfMembers }) => {
         />
         <button className="search-button">Search</button>
       </form>
+      <select value={stateName} onChange={(e) => setStateName(e.target.value)}>
+        {Object.keys(stateObj).map((state) => (
+          <option key={state} value={state}>
+            {state}
+          </option>
+        ))}
+      </select>
+      <select value={cityName} onChange={(e) => setCityName(e.target.value)}>
+        {cityList.map((city) => (
+          <option key={city} value={city}>
+            {city}
+          </option>
+        ))}
+      </select>
     </div>
   );
 };
